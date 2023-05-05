@@ -1,8 +1,8 @@
 import React from "react";
-import AsyncAndArrowTest from "../app/asyncAndArrowTest";
+import TranspileTest from "../app/transpileTest";
 
 const HomePage = () => {
-  return <AsyncAndArrowTest />;
+  return <TranspileTest />;
 };
 
 export default HomePage;

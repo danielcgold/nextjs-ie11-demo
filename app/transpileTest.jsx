@@ -5,17 +5,19 @@ import { useEffect, useState } from "react";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-import { asyncFunc, arrowFunc } from "../utils";
+import { asyncFunc, arrowFunc, fullName, person } from "../utils";
 
-function AsyncAndArrowTest() {
+function TranspileTest() {
   const [asyncResult, setAsyncResult] = useState("");
   const [arrowResult, setArrowResult] = useState("");
+  const [destructureResult, setDestructureResult] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       const asyncResult = await asyncFunc();
       setAsyncResult(asyncResult);
       setArrowResult(arrowFunc());
+      setDestructureResult(fullName(person));
     };
 
     fetchData();
@@ -30,8 +32,11 @@ function AsyncAndArrowTest() {
       <div>
         <strong>Arrow function result:</strong> {arrowResult}
       </div>
+      <div>
+        <strong>Destructuring function result:</strong> {destructureResult}
+      </div>
     </div>
   );
 }
 
-export default AsyncAndArrowTest;
+export default TranspileTest;

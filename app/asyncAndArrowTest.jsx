@@ -7,7 +7,7 @@ import "regenerator-runtime/runtime";
 
 import { asyncFunc, arrowFunc } from "../utils";
 
-function Page() {
+function AsyncAndArrowTest() {
   const [asyncResult, setAsyncResult] = useState("");
   const [arrowResult, setArrowResult] = useState("");
 
@@ -34,4 +34,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default AsyncAndArrowTest;
